@@ -14,8 +14,8 @@ Vous cochez différents thèmes avec un maximum de 3 thèmes et LOVERICE vous pr
 
 Notre équipe compte trois personnes: 
 
-BRAHIMI Mohamed (Scrum Master)
-SHI Yifan (Product Owner)
+BRAHIMI Mohamed (Product Owner)
+SHI Yifan (Scrum Master)
 SUN Yukai
 
 *Les rôles de Product Owner et de Scrum Master peuvent changer au cours du projet.
