@@ -12,9 +12,16 @@ Vous cochez différents thèmes avec un maximum de 3 thèmes et LOVERICE vous pr
 
 ## Membres de l'équipe et répartition des rôles
 
-Notre équipe compte trois personnes, les rôles de Product Owner et de Scrum Master peuvent changer au cours du projet.
+Notre équipe compte trois personnes : 
+````
+BRAHIMI Mohamed (Product Owner)
+SHI Yifan (Scrum Master)
+SUN Yukai (Dev)
+````
 
 ![img.png](Composition d'équipe.png)
+
+les rôles de Product Owner et de Scrum Master peuvent changer au cours du projet.
 
 ## Lien vers le kanban board 
 //TODO: Mets le lien ici
