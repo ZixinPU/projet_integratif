@@ -24,7 +24,7 @@ SUN Yukai (Dev)
 les rôles de Product Owner et de Scrum Master peuvent changer au cours du projet.
 
 ## Lien vers le kanban board 
-//TODO: Mets le lien ici
+https://github.com/users/ZixinPU/projects/3/views/1
 
 
 ## Lien vers le dossier Google Drive 
