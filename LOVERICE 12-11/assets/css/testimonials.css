@@ -49,7 +49,7 @@ body {
     padding: 1.25rem
 }
 
-p {
+.items p {
     font-size: 0.875rem;
     margin-bottom: .5rem;
     line-height: 1.5rem
@@ -64,7 +64,8 @@ h4{
 }
 
 .profile-pic{
-    width: 58px;
+    width: 2250%;
+    height: 2250%;
 }
 
 .cust-name{
