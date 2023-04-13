@@ -1,6 +1,6 @@
 import sqlite3
 
-# 连接到一个数据库，如果不存在就创建
+# Se connecter à une base de données, la créer si elle n'existe pas
 conn = sqlite3.connect('./db/donnee.db')
 
 # 创建一个游标对象，用于执行SQL语句
