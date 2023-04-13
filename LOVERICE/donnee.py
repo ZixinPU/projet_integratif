@@ -1,5 +1,7 @@
 import sqlite3
 
+#sqlite
+
 # Se connecter à une base de données, la créer si elle n'existe pas
 conn = sqlite3.connect('./db/donnee.db')
 
@@ -21,7 +23,7 @@ c.execute('''CREATE TABLE Utilisateur
 c.execute('''CREATE TABLE Service_Client
              (IdSAV INTEGER PRIMARY KEY AUTOINCREMENT)''')
 
-# 创建Thème表格
+# 创建Thème表格  
 c.execute('''CREATE TABLE Thème
              (IdThème INTEGER PRIMARY KEY AUTOINCREMENT,
              NomThème VARCHAR(255) NOT NULL)''')
