@@ -76,22 +76,22 @@
 					Nous aimerions recevoir de vos nouvelles. Remplissez le formulaire ci-dessous avec quelques informations et nous vous répondrons dès que possible. Veuillez nous accorder quelques jours pour vous répondre.
 				</p>
 				<br>
-					<form name="formulaire" method="get" action="Recu.html">
+					<form name="formulaire" method="get" action="http://127.0.0.1:5000/recu.html">
 						<div class="row">
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Nom" required>
+								<input class="form-control" type="text" name="nom" placeholder="Nom" required>
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="email" placeholder="Email" required>
+								<input class="form-control" type="email" name="email" placeholder="Email" required>
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="tel" placeholder="Numéro de téléphone" required>
+								<input class="form-control" type="tel" name="num" placeholder="Numéro de téléphone" required>
 							</div>
 						</div>
 						<br>
 						<div class="row">
 							<div class="col-sm-12">
-								<textarea placeholder="Tapez votre message ici..." class="form-control" rows="9" required></textarea>
+								<textarea placeholder="Tapez votre message ici..." name="message" class="form-control" rows="9" required></textarea>
 							</div>
 						</div>
 						<br>
