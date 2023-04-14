@@ -31,7 +31,7 @@
 	<!-- ici choixthemes -->
 
 	<link rel="stylesheet" href="../static/css/style.css">
-
+	
 
 
 </head>
@@ -79,91 +79,51 @@
 	</div>
 
 		<!-- /container -->
-		<div class="row">
-
-			<!-- thèmes choix -->
-
-			<div class="container3">
-				<div class="select-btn3">
-					<span class="btn-text3">Sélectionnez votre Thème... <br><em>(max 3)</em></span>
-					<span class="arrow-dwn3">
-						<img class="PhotoMINI2" src="../static/images/fb-removebg-preview.png"></span>
-				</div>
-
-				<ul class="list-items3">
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/tv1.png" alt="">TV</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"> <img class="PhotoMINI" src="../static/images/casque1.png" alt=""> Casque
-							Bluetooth</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/tel1.png"
-								alt="">Smartphone</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/ecran1.png"
-								alt="">Moniteur/Ecran PC
-						</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/laptop1.png"
-								alt="">Ordinateur portbale</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/enceinte1.png"
-								alt="">Enceinte Bluetooth</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/tablette1.png"
-								alt="">Tablette</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/ecouteurs1.png"
-								alt="">Ecouteurs Bluetooth</span>
-					</li>
-					<li class="item3">
-						<span class="checkbox3">
-							<i class="fa-solid fa-check check-icon3"></i>
-						</span>
-						<span class="item-text3"><img class="PhotoMINI" src="../static/images/manette1.png" alt="">Consoles
-							de Jeux-Video</span>
-					</li>
-				</ul>
+		
+		<form>
+			<div class="form-group select-all">
+				<input type="checkbox" id="select-all">
+				<label for="select-all">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Skills
+				</label>
 			</div>
-
-			<!-- /Sidebar -->
-
-		</div>
+			<div class="form-group">
+				<input type="checkbox" id="web-developer">
+				<label for="web-developer">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Web Developer
+				</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" id="web-designer">
+				<label for="web-designer">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Web Designer
+				</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" id="web-scraper">
+				<label for="web-scraper">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Web Scraper
+				</label>
+			</div>
+		 <input class="form-group" type="submit" class= "check" value="Valider"  >
+		</form>
 	
 
 	<!-- JavaScript -->
 	<script src="../static/js/selecteur.js"></script>
+</body>
 
 
 
@@ -258,6 +218,5 @@
 	<script src="../static/js/headroom.min.js"></script>
 	<script src="../static/js/jQuery.headroom.min.js"></script>
 	<script src="../static/js/template.js"></script>
-</body>
 
 </html>
