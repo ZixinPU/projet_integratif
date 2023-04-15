@@ -54,7 +54,13 @@ def Articles():
 
 @app.route('/CasqueBluetooth')
 def CasqueBluetooth():
-    return render_template('CasqueBluetooth.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'CasqueBluetooth'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('CasqueBluetooth.html', list=a)
 
 
 @app.route('/ChoixThème')
@@ -64,35 +70,77 @@ def ChoixThème():
 
 @app.route('/ConsolesDeJeux-Video')
 def ConsolesDeJeuxVideo():
-    return render_template('ConsolesDeJeux-Video.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'ConsolesDeJeux-Video'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('ConsolesDeJeux-Video.html', list=a)
 
 
 @app.route('/EcouteursBluetooth')
 def EcouteursBluetooth():
-    return render_template('EcouteursBluetooth.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'EcouteurBluetooth'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('EcouteursBluetooth.html', list=a)
 
 @app.route('/EnceinteBluetooth')
 def EnceinteBluetooth():
-    return render_template('EnceinteBluetooth.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'EnceinteBluetooth'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('EnceinteBluetooth.html', list=a)
 
 @app.route('/EcranPC')
 def EcranPC():
-    return render_template('EcranPC.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'EcranPC'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('EcranPC.html', list=a)
 
 
 @app.route('/OrdinateurPortbale')
 def OrdinateurPortbale():
-    return render_template('OrdinateurPortbale.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'OrdinateurPortbale'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('OrdinateurPortbale.html', list=a)
 
 
 @app.route('/Smartphone')
 def Smartphone():
-    return render_template('Smartphone.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'Smartphone'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('Smartphone.html', list=a)
 
 
 @app.route('/Tablette')
 def Tablette():
-    return render_template('Tablette.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+    FROM Article, Thème
+    where nomthème = 'Tablette'
+    and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    return render_template('Tablette.html', list=a)
 
 
 @app.route('/Thèmes')
@@ -102,7 +150,15 @@ def Thèmes():
 
 @app.route('/TV')
 def TV():
-    return render_template('TV.html')
+    con = create_connection("./db/DonnéesLoverice.db")
+    query = '''SELECT * 
+FROM Article, Thème
+where nomthème = 'TV'
+and Article.IdThème = Thème.idthème'''
+    a = execute_read_query(con, query)
+    # print(a)
+    return render_template('TV.html', list=a)
+
 
 
 # ---------------Contactez-nous----------------------
