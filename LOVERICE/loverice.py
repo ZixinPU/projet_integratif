@@ -38,13 +38,13 @@ def execute_commit(connection, query, params):
 
 
 @app.route('/')
-def Acceuil():
-    return render_template('Acceuil.html')
+def Accueil():
+    return render_template('Accueil.html')
 
 
-@app.route('/Acceuil')
-def Acceuil1():
-    return render_template('Acceuil.html')
+@app.route('/Accueil')
+def Accueil1():
+    return render_template('Accueil.html')
 
 
 @app.route('/Articles')
@@ -107,34 +107,47 @@ def TV():
 def contact():
     return render_template('contact.html')
 
-
 @app.route('/recu', methods=['GET', 'POST'])
 def recu():
-    nom = request.form['nom']
-    email = request.form['email']
-    num = request.form['num']
+    if request.method == 'POST':
+        nom = request.form.get('nom')
+        email = request.form.get('email')
+        num = request.form.get('num')
+        msg = request.form.get('message')
 
-    query = '''SELECT idUtilisateur
-FROM Contacter
-order by idUtilisateur DESC 
-LIMIT 1'''
-    idUtilisateur = execute_read_query(create_connection("./db/DonnéesLoverice.db"), query)
-    print('dcd')
-    idUtilisateur = idUtilisateur[0][0] + 1
+        # Get the highest idUtilisateur and increment it by 1
+        query = '''
+            SELECT MAX(idUtilisateur)
+            FROM Contacter
+        '''
+        idUtilisateur = execute_read_query(create_connection("./db/DonnéesLoverice.db"), query)[0][0]
+        if idUtilisateur is None:
+            idUtilisateur = 1
+        else:
+            idUtilisateur += 1
 
-    query = '''SELECT idSAV
-    FROM Contacter
-    order by idSAV DESC 
-    LIMIT 1'''
-    idSAV = execute_read_query(create_connection("./db/DonnéesLoverice.db"), query)
-    idSAV = idUtilisateur[0][0] + 1
+        # Get the highest idSAV and increment it by 1
+        query = '''
+            SELECT MAX(idSAV)
+            FROM Contacter
+        '''
+        idSAV = execute_read_query(create_connection("./db/DonnéesLoverice.db"), query)[0][0]
+        if idSAV is None:
+            idSAV = 1
+        else:
+            idSAV += 1
 
-    query1 = '''INSERT INTO Contacter 
-                VALUES (?, ?, ?, ?, ?)'''
-    values1 = (idUtilisateur, idSAV, email, nom, num)
-    execute_commit(create_connection("./db/DonnéesLoverice.db"), query1, values1)
+        # Insert the new row into the Contacter table
+        query = '''
+            INSERT INTO Contacter (idUtilisateur, idSAV, mailUtil, nomUtil, numUtil,msgUtil)
+            VALUES (?, ?, ?, ?, ?, ?)
+        '''
+        values = (idUtilisateur, idSAV, email, nom, num, msg)
+        execute_commit(create_connection("./db/DonnéesLoverice.db"), query, values)
 
-    return render_template('recu.html')
+        return render_template('recu.html')
+    else:
+        return "Method not allowed"
 
 
 # -----------------------------------------------------------------
