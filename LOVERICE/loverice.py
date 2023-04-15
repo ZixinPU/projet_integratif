@@ -71,6 +71,9 @@ def ConsolesDeJeuxVideo():
 def EcouteursBluetooth():
     return render_template('EcouteursBluetooth.html')
 
+@app.route('/EnceinteBluetooth')
+def EnceinteBluetooth():
+    return render_template('EnceinteBluetooth.html')
 
 @app.route('/EcranPC')
 def EcranPC():
