@@ -113,7 +113,10 @@ footer {
     margin-bottom: 50px;
   }
 
-
+  .row {
+    display: flex;
+    justify-content: center;
+}
 
 .text-bottom {
     display: flex;
