@@ -174,7 +174,7 @@ def recu():
         num = request.form.get('num')
         msg = request.form.get('message')
 
-        # Get the highest idUtilisateur and increment it by 1
+        
         query = '''
             SELECT MAX(idUtilisateur)
             FROM Contacter
@@ -185,7 +185,7 @@ def recu():
         else:
             idUtilisateur += 1
 
-        # Get the highest idSAV and increment it by 1
+        
         query = '''
             SELECT MAX(idSAV)
             FROM Contacter
@@ -196,19 +196,58 @@ def recu():
         else:
             idSAV += 1
 
-        # Insert the new row into the Contacter table
+      
         query = '''
             INSERT INTO Contacter (idUtilisateur, idSAV, mailUtil, nomUtil, numUtil,msgUtil)
             VALUES (?, ?, ?, ?, ?, ?)
         '''
         values = (idUtilisateur, idSAV, email, nom, num, msg)
         execute_commit(create_connection("./db/DonnéesLoverice.db"), query, values)
+        
+        # Fermeture de la connexion à la base de données
+        conn = create_connection("./db/DonnéesLoverice.db")
+        conn.close()
 
         return render_template('recu.html')
     else:
         return "Method not allowed"
 
+    
 
-# -----------------------------------------------------------------
+
+    #Partie Formulaire Themes
+@app.route('/ArticlesMoinsChere', methods=['POST'])
+def resultat():
+    theme = request.form['theme']
+    conn = create_connection("./db/DonnéesLoverice.db")
+    c = conn.cursor()
+    
+    # Récupérer l'IdThème correspondant au nom du thème soumis
+    c.execute('SELECT IdThème FROM Thème WHERE NomThème = ?;', (theme,))
+    id_theme = c.fetchone()
+    
+    if id_theme:
+        id_theme = id_theme[0]
+        # Récupérer les articles en utilisant l'IdThème
+        c.execute('SELECT NomArt, PrixArt,		descriptionArt,	URLArt	,LienImage FROM Article WHERE IdThème = ? ORDER BY PrixArt ASC LIMIT 2;', (id_theme,))
+        article = c.fetchall()
+    else:
+        article = []
+
+    conn.close()
+    return render_template('ArticleMoinsChere.html', article=article, theme=theme)
+
+
+    
+@app.route('/ArticlesMoinsChere')
+def ArticlePas():
+    return render_template('ArticleMoinsChere.html')
+
+@app.route('/ChoixThèmere')
+def ArticlePas1():
+    return render_template('ChoixThème.html')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
