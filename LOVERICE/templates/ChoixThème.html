@@ -31,8 +31,7 @@
 	<!-- ici choixthemes -->
 
 	<link rel="stylesheet" href="../static/css/style.css">
-	<link rel="stylesheet" href="../static/css/choixthemes.css">
-
+	
 
 
 </head>
@@ -67,7 +66,7 @@
 	</div>
 	<!-- /.navbar -->
 
-	
+	<header id="head" class="secondary"></header>
 
 	<!-- container -->
 
@@ -79,123 +78,130 @@
 		</ol>
 	</div>
 
-
-	<div class="container-fluid bg-white form-wrapper">
-		<form action="/ArticlesMoinsChere" method="post" class="form-theme">
-		  <div class="form-group">
-			<label for="theme" class="theme-label">Choisissez votre Thème :</label>
-			<div class="input-group">
-			  <select id="theme" name="theme" class="form-control theme-select">
-				<option value="TV">TV</option>
-				<option value="CasqueBluetooth">Casque Bluetooth</option>
-				<option value="EnceinteBluetooth">Enceinte Bluetooth</option>
-				<option value="ConsolesDeJeux-Video">Consoles De Jeux-Video</option>
-				<option value="Tablette">Tablette</option>
-				<option value="EcranPC">Ecran PC</option>
-				<option value="OrdinateurPortbale">Ordinateur Portable</option>
-				<option value="EcouteurBluetooth">Ecouteurs Sans Fil</option>
-				<option value="Smartphone">Smartphone</option>
-			  </select>
-			  <div class="input-group-append">
-				<button type="submit" class="btn btn-theme btn-orange">RECHERCHER</button>
-			  </div>
+		<!-- /container -->
+		
+		<form>
+			<div class="form-group select-all">
+				<input type="checkbox" id="select-all">
+				<label for="select-all">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Skills
+				</label>
 			</div>
-		  </div>
+			<div class="form-group">
+				<input type="checkbox" id="web-developer">
+				<label for="web-developer">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Web Developer
+				</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" id="web-designer">
+				<label for="web-designer">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Web Designer
+				</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" id="web-scraper">
+				<label for="web-scraper">
+					<span class="checkbox">
+						<span class="check"></span>
+					</span>
+					Web Scraper
+				</label>
+			</div>
+		 <input class="form-group" type="submit" class= "check" value="Valider"  >
 		</form>
-	  </div>
-	  
 	
-	
-
-
-
-
-
 
 	<!-- JavaScript -->
 	<script src="../static/js/selecteur.js"></script>
-
-
-
-
-<footer id="footer" class="top-space">
-
-	<div class="footer1">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-3 widget">
-					<h3 class="widget-title">Contact</h3>
-					<div class="widget-body">
-						<p>+33 1 23 45 67 67<br>
-							<a href="mailto:#">Loverice@LOVERICE.fr</a><br>
-							<br>110 esplanade du Général-de-Gaulle 92932 Paris La Défense Cedex | France.
-
-						</p>
-					</div>
-				</div>
-
-				<div class="col-md-3 widget">
-					<h3 class="widget-title">Suivez-nous</h3>
-					<div class="widget-body">
-						<p class="follow-me-icons">
-							<a href="https://twitter.com/"><i class="fa fa-twitter fa-2"></i></a>
-							<a href="https://github.com/ZixinPU/projet_integratif"><i class="fa fa-github fa-2"></i></a>
-							<a href="https://facebook.com/"><i class="fa fa-facebook fa-2"></i></a>
-						</p>
-					</div>
-				</div>
-
-				<div class="col-md-6 widget">
-					<h3 class="widget-title">A propos de nous...</h3>
-					<div class="widget-body">
-						<p>LOVERICE est une idée née d'un anniversaire, n'ayant pas d'idées de cadeaux, un budget
-							limité et surtout presser par le temps. Nous avons eu l'idée de créer LOVERICE pour vous
-							faciliter dans vos achats et vous proposer ainsi un acompagnement personalisé grâce aux
-							produits suggérés...
-						<div class=""></div>
-						</p>
-						<p></p>
-					</div>
-				</div>
-
-			</div> <!-- /row of widgets -->
-		</div>
-	</div>
-
-	<div class="footer2">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-6 widget">
-					<div class="widget-body">
-						<p class="simplenav">
-							<a href="Accueil">Accueil</a> |
-							<a href="ChoixThème">Choisissez votre thème</a> |
-							<a href="Thèmes">Nos Thèmes</a> |
-							<a href="contact">Contactez-nous</a> |
-
-						</p>
-					</div>
-				</div>
-
-				<div class="col-md-6 widget">
-					<div class="widget-body">
-						<p class="text-right">
-							Copyright | LOVERICE | 2022
-						</p>
-					</div>
-				</div>
-
-			</div> <!-- /row of widgets -->
-		</div>
-	</div>
-
-</footer>
 </body>
 
 
 
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p>+33 1 23 45 67 67<br>
+								<a href="mailto:#">Loverice@LOVERICE.fr</a><br>
+								<br>110 esplanade du Général-de-Gaulle 92932 Paris La Défense Cedex | France.
+
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Suivez-nous</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="https://twitter.com/"><i class="fa fa-twitter fa-2"></i></a>
+								<a href="https://github.com/ZixinPU/projet_integratif"><i
+										class="fa fa-github fa-2"></i></a>
+								<a href="https://facebook.com/"><i class="fa fa-facebook fa-2"></i></a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">A propos de nous...</h3>
+						<div class="widget-body">
+							<p>LOVERICE est une idée née d'un anniversaire, n'ayant pas d'idées de cadeaux, un budget
+								limité et surtout presser par le temps. Nous avons eu l'idée de créer LOVERICE pour vous
+								faciliter dans vos achats et vous proposer ainsi un acompagnement personalisé grâce aux
+								produits suggérés...
+							<div class=""></div>
+							</p>
+							<p></p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="Accueil">Accueil</a> |
+								<a href="ChoixThème">Choisissez votre thème</a> |
+								<a href="Thèmes">Nos Thèmes</a> |
+								<a href="contact">Contactez-nous</a> |
+
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright | LOVERICE | 2022
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>
 
 
 
@@ -203,11 +209,14 @@
 
 
 
-<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="../static/js/headroom.min.js"></script>
-<script src="../static/js/jQuery.headroom.min.js"></script>
-<script src="../static/js/template.js"></script>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="../static/js/headroom.min.js"></script>
+	<script src="../static/js/jQuery.headroom.min.js"></script>
+	<script src="../static/js/template.js"></script>
 
 </html>
